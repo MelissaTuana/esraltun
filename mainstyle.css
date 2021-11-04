@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: F8EDEB;
+    background-color: #d8e2dc;
+    height: 100%;
 }
 
 h1 {
@@ -19,7 +24,7 @@ h3 {
 
 h4 {
     color: black;
-    font-family:
+    font-family: 'Mulish', sans-serif;
 }
 
 p {
@@ -27,16 +32,10 @@ p {
     font-family: 'Mulish', sans-serif;
 }
 
-body,
-html {
-    height: 100%;
-}
-
 .hero-image {
-    background-image: url("hero-image2.jpg");
-    height: 80%;
+    background-image: url("hero-image.jpg");
+    height: 700px;
     width: 100%;
-    border-bottom: #d8e2dc solid 20px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,6 +53,239 @@ html {
 .hero-button a:active,
 .hero-button a:hover {
     background-color: #fae1dd;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+
+/* Container around content */
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+/* The circles on the timeline */
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #ffe5d9;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Place the container to the left */
+
+.left {
+    left: 0;
+}
+
+
+/* Place the container to the right */
+
+.right {
+    left: 50%;
+}
+
+
+/* Add arrows to the left container (pointing right) */
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+/* Add arrows to the right container (pointing left) */
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+
+/* Fix the circle for containers on the right side */
+
+.right::after {
+    left: -16px;
+}
+
+
+/* The actual content */
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+.skills {
+    display: inline-block;
+    background-color: white;
+    width: 40%;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 15px 0px 15px 15px;
+}
+
+.licenses {
+    display: inline-block;
+    background-color: white;
+    width: 40%;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 0px 15px 15px 15px;
+}
+
+.about {
+    background-color: white;
+    margin: 50px;
+    padding: 50px;
+}
+
+.projects {
+    background-color: white;
+    margin: 50px;
+    padding: 50px;
+}
+
+.blog {
+    background-color: white;
+    margin: 50px;
+    padding: 50px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 25%;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: white;
+    color: black;
+    font-family: inherit;
+    font-size: 50px;
+    text-align: center;
+}
+
+.flip-box-back {
+    background-color: #ffe5d9;
+    color: white;
+    transform: rotateX(180deg);
+    list-style: none;
+    font-family: inherit;
+    font-size: 35px;
+}
+
+.flip-box-back ul {
+    list-style: none;
 }
 
 .main-header {
@@ -83,7 +315,7 @@ html {
 .main-header a:hover,
 .main-header a:active {
     text-decoration: none;
-    color: #d8e2dc;
+    color: white;
 }
 
 .main-nav__item {
@@ -94,7 +326,7 @@ html {
 
 .main-nav__item--cta a {
     color: black;
-    background-color: #d8e2dc;
+    background-color: #ffe5d9;
     font-size: 20px;
     padding: 8px 16px;
     border-radius: 2px;
@@ -103,6 +335,49 @@ html {
 .main-nav__item--cta a:hover,
 .main-nav__item--cta a:active {
     color: black;
-    background-color: #ffe5d9;
+    background-color: white;
     border: none;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.footer-nav {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.footer-nav__items {
+    display: inline-block;
+    padding: 15px;
+    margin: 0 16px;
+    list-style: none;
+    width: calc(100% -200px);
+    text-decoration: none;
+}
+
+.footer-nav__item {
+    display: inline-block;
+    padding: 0;
+    margin: 0 16px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-logo {
+    display: inline-block;
+    vertical-align: center;
 }
