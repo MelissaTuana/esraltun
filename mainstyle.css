@@ -216,9 +216,9 @@ p {
     display: inline-block;
     vertical-align: center;
     background-color: white;
-    width: 30%;
+    width: 45%;
     padding: 40px;
-    margin: 9%;
+    margin: 1%;
     border: 1px solid #f1f1f1;
     border-radius: 15px;
     background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
@@ -235,9 +235,9 @@ p {
     display: inline-block;
     vertical-align: center;
     background-color: white;
-    width: 30%;
+    width: 45%;
     padding: 40px;
-    margin: 9%;
+    margin: 1%;
     border: 1px solid #f1f1f1;
     border-radius: 15px;
     background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
@@ -246,32 +246,60 @@ p {
 
 .about {
     background-color: white;
+    width: 50%;
     margin: 50px;
     padding: 50px;
     border-radius: 15px;
+    border: 1px solid #f1f1f1;
+    background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
+    box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
+}
+
+.project {
+    margin: 50px;
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #f1f1f1;
+    background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
+    box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
+}
+
+.project-image__head {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     border: 1px solid #f1f1f1;
     background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
     box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
 }
 
 .projects {
-    margin: 50px;
-    padding: 50px;
+    padding: 30px;
+    margin: 1px;
+    display: inline-block;
+    vertical-align: center;
+    text-align: center;
+    width: 33%;
+    height: auto;
     border-radius: 15px;
     border: 1px solid #f1f1f1;
     background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
     box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
 }
 
-.projects h2 {
-    display: inline-block;
-    text-align: right;
+.project h1 {
+    text-align: center;
 }
 
-.projects-image {
+.projects h2 {
+    text-align: center;
+}
+
+.project-image {
     display: inline-block;
-    padding: 10px;
-    margin: 10px;
+    width: 400px;
+    vertical-align: center;
 }
 
 .blog {
