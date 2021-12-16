@@ -1,0 +1,14 @@
+.content {
+    margin: 50px;
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    background: linear-gradient(315deg, #c2cbc6, #e7f2eb);
+    box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
+}
+
+.content a {
+    text-decoration: none;
+    padding: 30px;
+}
