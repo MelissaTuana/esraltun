@@ -1,6 +1,15 @@
+img {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: middle;
+}
+
+p {
+    padding: 0 150px 0 150px;
+}
+
 .content {
     margin: 50px;
-    padding: 20px 30px;
     background-color: white;
     position: relative;
     border-radius: 15px;
@@ -11,4 +20,28 @@
 .content a {
     text-decoration: none;
     padding: 30px;
+    display: block;
+    padding: 32px;
+}
+
+.content:hover,
+.content:active {
+    box-shadow: -6px -6px 12px #e3ede7, 6px 6px 12px #cdd7d1;
+}
+
+.school-title {
+    font-size: 3rem;
+    display: inline-block;
+}
+
+.study {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 0 0 0 150px;
+}
+
+.year {
+    font-size: 1rem;
+    padding: 0 0 0 150px;
 }
