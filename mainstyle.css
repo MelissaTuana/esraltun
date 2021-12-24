@@ -250,6 +250,11 @@
     box-shadow: -6px -6px 12px #cdd7d1, 6px 6px 12px #e3ede7;
 }
 
+.project:hover,
+.projects:hover {
+    box-shadow: -6px -6px 12px #e3ede7, 6px 6px 12px #cdd7d1;
+}
+
 .project h1 {
     text-align: center;
 }
